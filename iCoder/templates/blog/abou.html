@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %} About Author {% endblock title %}
+{% block aboutactive %} active {% endblock aboutactive %}
+{% block body %}
+<!--<img src='/media/{{abv.image}}' alt="...">-->
+<div class="container my-3">
+<h2>About Author</h2>
+
+    {% for abv in ab %}
+
+<div class="row no-gutters border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
+    <div class="col p-4 d-flex flex-column position-static">
+        <div class="image"></div> <img src='/media/{{abv.photo}}' alt="NO PIC"></div>
+    {% for di in babou %}
+          <strong class="d-inline-block mb-2 text-primary"> About Author {{di.name}}</strong>
+
+
+
+          <h3 class="mb-1">Email id : {{di.email}}</h3>
+    {% endfor %}
+          <br>
+          <h3>Description</h3>
+          <p class="card-text mb-auto">{{abv.Description}}</p>
+
+      </div>
+        <div class="col-auto d-none d-lg-block">
+
+        </div>
+
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+{% endblock body %}
