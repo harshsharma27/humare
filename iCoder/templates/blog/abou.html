@@ -12,15 +12,23 @@
     <div class="col p-4 d-flex flex-column position-static">
         <div class="image"></div> <img src='/media/{{abv.photo}}' alt="NO PIC"></div>
     {% for di in babou %}
+
+    {% if di.name == abv.name.name %}
           <strong class="d-inline-block mb-2 text-primary"> About Author {{di.name}}</strong>
 
-
+    {% endif %}
+    {% if di.email == abv.name.email %}
 
           <h3 class="mb-1">Email id : {{di.email}}</h3>
+    {% endif %}
+
     {% endfor %}
           <br>
           <h3>Description</h3>
           <p class="card-text mb-auto">{{abv.Description}}</p>
+<!--        Facebooklink-->
+<!--    limkedin link-->
+<!--    twitter link left-->
 
       </div>
         <div class="col-auto d-none d-lg-block">

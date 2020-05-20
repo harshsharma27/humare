@@ -14,9 +14,9 @@
 <div class="row no-gutters border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
     <div class="col p-4 d-flex flex-column position-static">
         {% for d in b_ab %}
-
+            {% if d.sno == post.sno %}
                 <strong class="d-inline-block mb-2 text-primary"><a href="/blog/abou"> Article by {{d.name}}</a></strong>
-
+            {% endif %}
         {% endfor %}
           <div class="mb-0 text-muted">{{post.timeStamp}}</div>
           <h3 class="mb-1">{{post.title}}</h3>

@@ -23,7 +23,7 @@ class Post(models.Model):
 
 
 class Author(models.Model):
-    sno = models.AutoField(primary_key=True)
+
     photo = models.ImageField(upload_to='blog/images')
     name = models.ForeignKey(Aut,on_delete=models.CASCADE)
     # email = models.CharField(max_length=100)
